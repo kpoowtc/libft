@@ -6,11 +6,11 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:48:44 by kpoo              #+#    #+#             */
-/*   Updated: 2019/05/21 15:13:21 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/05/23 13:34:34 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./../includes/libft.h"
+#include "libft.h"
 
 void ft_putstr(char const *str)
 {
