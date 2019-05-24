@@ -6,13 +6,14 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:00:13 by kpoo              #+#    #+#             */
-/*   Updated: 2019/05/24 15:10:41 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/05/24 16:29:24 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 //strlen, strnlen -- fint length of string | #include <string.h> 
 	size_t ft_strlen(const char *str);
@@ -21,13 +22,13 @@
 	void *ft_memset(void *b, int c, size_t len);
 
 //bzero -- write zeroes to a byte string
-	void ft_bzero(void *s, size_t n);
+	void  ft_bzero(void *s, size_t n);
 
 //memcpy -- copy memory area | #include <string.h>
 	void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 
 //memccpy -- copy string until character found | #include <string.h>
-	void *ft_memccpy(void *restrict dst, const void *restrict src, int c, sixe_t n);
+	void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 
 //memmove -- copy byte string | #include <string.h>
 	void *ft_memmove(void *dst, const void *src, size_t len);
@@ -46,7 +47,7 @@
 	//char *ft_stpcpy(char *dst, const char *src); -- (remove comment to enable)
 	//char *ft_stpncpy(char *dst, const char *src, size_t len); -- (remove comment to enable)
 	char *ft_strcpy(char *dst, const char *src);
-	char *ft_strncpy(chat *dst, const char *src, size_t len);
+	char *ft_strncpy(char *dst, const char *src, size_t len);
 
 //strcat, strncat -- concatenate/link strings | #include <string.h>
 	char *ft_strcat(char *restrict s1, const char *restrict s2);
@@ -124,7 +125,7 @@
 	char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 //strequ --
-	int ft_strequ(char const i*s1, char const *s2);
+	int ft_strequ(char const *s1, char const *s2);
 
 //strnequ --
 	int ft_strnequ(char const *s1, char const *s2, size_t n);
@@ -163,28 +164,28 @@
 	void ft_putstr_fd(char const *s, int fd);
 
 //putendl_fd --
-	void ft_putendl(char const *s, int fd);
+	void ft_putendl_fd(char const *s, int fd);
 
 //putnbr_fd --
 	void ft_putnbr_fd(int n, int fb);
 
 
 //FUNCTIONS THAT ALLOW LIST MANIPULATION ------------------------------------------------------------------------------
-
+/*
 //lstnew --
-	t_list *ft_lstnew(void const *content, size_t content_size);
+	va_list *ft_lstnew(void const *content, size_t content_size);
 
 //lstdelone --
-	void ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+	void ft_lstdelone(va_list **alst, void (*del)(void *, size_t));
 
 //lstdel --
-	void ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+	void ft_lstdel(va_list **alst, void (*del)(void *, size_t));
 
 //lstadd --
-	void ft_lstadd(t_list **alst, t_list *new);
+	void ft_lstadd(va_list **alst, va_list *new);
 
 //lstiter --
-	void ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+	void ft_lstiter(va_list *lst, void (*f)(va_list *elem));
 
 //lstmap --
-	t_list *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+	va_list *ft_lstmap(va_list *lst, va_list *(*f)(va_list *elem)); */
