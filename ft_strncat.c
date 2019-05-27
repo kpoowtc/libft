@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:49:52 by kpoo              #+#    #+#             */
-/*   Updated: 2019/05/23 12:42:28 by kpoo             ###   ########.fr       */
+/*   Created: 2019/05/27 11:01:30 by kpoo              #+#    #+#             */
+/*   Updated: 2019/05/27 13:15:30 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_isalnum(int c)
+char *ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else if (c >= 'A' && c <= 'Z')
-		return (1);
-	else if (c >= 'a' && c <= 'z')
-		return (1);
-	else
-		return (0);
+	size_t i;
+	size_t	s1_size;
+
+	i = 0;
+	s1_size = 0;
+
+	if (n != 0)
+	{
+		char *d = s1;
+		char *s = s2;
+		while (*d != 0)
+			d++;
+		{
+		if ((*d = *s++) != 0)
+			break;
+		d++;
+		}
+		while (--n != 0)
+			*d = 0;
+		}
+	}
+	return (s1);
 }

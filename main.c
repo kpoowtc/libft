@@ -6,13 +6,13 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:29:48 by kpoo              #+#    #+#             */
-/*   Updated: 2019/05/24 16:29:41 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/05/27 13:42:27 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
  
 #include <stdio.h>
 #include <ctype.h>
-#include "./../includes/libft.h"
+#include "libft.h"
 
 int main(void)
 {
@@ -87,9 +87,28 @@ int main(void)
 	//(12) ft_memset_testing - done
 	char str[50] = "Testing";
  	printf("%s\n", ft_memset(str, '@', 3));
-*/	
+
 	//(13) ft_bzero_testing - not done
 	ft_bzero("cool", 2);
+	*/
+
+	//(14) ft_strcat_testing - done
+	//char to[100] = "Hello!";
+	//char from[100] = " Khuli";
+	//printf("%s\n", strcat(to, from));
+	//printf("%s\n", ft_strcat(to, from));
+	
+	//printf("\n"); //nextline
+
+	//(15) ft_strncat_testing - not done
+	//printf("%s\n", strncat(to, from, 6));
+	//printf("%s\n", ft_strncat(to, from, 6));
+
+	printf("\n"); //nextline
+
+	//(16) ft_strchr_testing - not done
+	printf("%s\n", strchr("Hello", 'e'));
+	printf("%s\n", ft_strchr("Hello", 'e'));
 
 	return (0);
 }

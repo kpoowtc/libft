@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 15:26:30 by kpoo              #+#    #+#             */
-/*   Updated: 2019/05/24 16:20:26 by kpoo             ###   ########.fr       */
+/*   Created: 2019/05/21 14:48:44 by kpoo              #+#    #+#             */
+/*   Updated: 2019/05/27 09:23:52 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./../includes/libft.h"
+#include "libft.h"
 
-void *ft_memset(void *dest, int c, size_t n)
+void ft_putstr(char const *str)
 {
-	size_t i;
-	char *str;
-	
+	int i;
+
 	i = 0;
-	str = dest;
-	while (i < n)
+	while (str[i] != '\0')
 	{
-		str[i] = c;
+		ft_putchar(str[i]);
 		i++;
 	}
-	return (str);
 }

@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 16:09:14 by kpoo              #+#    #+#             */
-/*   Updated: 2019/05/24 16:30:18 by kpoo             ###   ########.fr       */
+/*   Created: 2019/05/20 14:29:18 by kpoo              #+#    #+#             */
+/*   Updated: 2019/05/27 09:25:18 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./../includes/libft.h"
-
-void	ft_bzero(void *s, size_t n)
+#include "libft.h"
+char *ft_strcpy(char *dest, char *src)
 {
-	unsigned char	*buffer;
-	size_t	i;
+	int i;
 
-	buffer = s;
 	i = 0;
-
-	if (n == 0)
+	while (src[i])
 	{
-		i = i + 1;
-	}
-	while (i < n)
-	{
-		buffer[i] = 0;
+		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
