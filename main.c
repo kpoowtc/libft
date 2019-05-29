@@ -6,13 +6,13 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:29:48 by kpoo              #+#    #+#             */
-/*   Updated: 2019/05/27 13:42:27 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/05/28 12:35:21 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
  
 #include <stdio.h>
 #include <ctype.h>
-#include "libft.h"
+#include "libft.H"
 
 int main(void)
 {
@@ -90,7 +90,6 @@ int main(void)
 
 	//(13) ft_bzero_testing - not done
 	ft_bzero("cool", 2);
-	*/
 
 	//(14) ft_strcat_testing - done
 	//char to[100] = "Hello!";
@@ -107,8 +106,13 @@ int main(void)
 	printf("\n"); //nextline
 
 	//(16) ft_strchr_testing - not done
-	printf("%s\n", strchr("Hello", 'e'));
-	printf("%s\n", ft_strchr("Hello", 'e'));
+	//printf("%s\n", strchr("Hello", 'e'));
+	//printf("%s\n", ft_strchr("Hello", 'e'));
+*/	
+
+	char str[100] = "good";	
+	printf("%s\n", strdup(str));
+	printf("%d\n", ft_strdup(str));
 
 	return (0);
 }

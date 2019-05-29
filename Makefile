@@ -6,7 +6,7 @@
 #    By: kpoo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 09:28:07 by kpoo              #+#    #+#              #
-#    Updated: 2019/05/27 14:55:57 by kpoo             ###   ########.fr        #
+#    Updated: 2019/05/28 11:45:04 by kpoo             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,5 +37,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: re, fclean, clean, all
+.PHONY: clean fclean all re
 

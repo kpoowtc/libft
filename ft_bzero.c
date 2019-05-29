@@ -6,7 +6,7 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 16:09:14 by kpoo              #+#    #+#             */
-/*   Updated: 2019/05/27 09:22:04 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/05/28 08:36:30 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*buffer;
-	size_t	i;
+	size_t			i;
 
 	buffer = s;
 	i = 0;
-
 	if (n == 0)
 	{
 		i = i + 1;

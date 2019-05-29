@@ -6,13 +6,13 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:48:44 by kpoo              #+#    #+#             */
-/*   Updated: 2019/05/27 09:23:52 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/05/28 10:03:09 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr(char const *str)
+void	ft_putstr(char const *str)
 {
 	int i;
 
