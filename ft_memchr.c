@@ -6,7 +6,7 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 13:45:58 by kpoo              #+#    #+#             */
-/*   Updated: 2019/06/01 13:59:06 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/06/04 15:13:16 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*c_copy;
+	unsigned char	c_copy;
 	unsigned char	*s_copy;
 	int				i;
 
 	i = 0;
-	c_copy = (unsigned char *)c;
+	c_copy = (unsigned char)c;
 	s_copy = (unsigned char *)s;
 	while (n--)
 	{

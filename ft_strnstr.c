@@ -6,28 +6,38 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:29:05 by kpoo              #+#    #+#             */
-/*   Updated: 2019/05/30 16:42:57 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/06/05 11:26:48 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+char	*ft_strnstr(const char *hay, const char *nee, size_t len)
 {
-	size_t	size;
+	size_t	i;
+	size_t	j;
+	char	*h;
+	char	*n;
 
-	if (*s2 == 0)
-		return ((char *)s1);
-	size = ft_strlen(s2);
-	if (size == 0)
-		return ((char *)s1);
-	if (size > len)
+	i = 0;
+	h = (char *)hay;
+	n = (char *)nee;
+	if (h[i] == '\0')
 		return (NULL);
-	while (*s1 != 0 && len-- >= len2)
+	if (n[i] == '\0')
+		return (h);
+	while (h[i] && i < len)
 	{
-		if ( == *s2 && ft_memcmp(s1, s2, len2) == 0)
-			return ((char *)s1);
-		s1++;
+		j = 0;
+		while (h[i + j] == n[j] && (i + j) < len)
+		{
+			j++;
+			if (n[j] == '\0')
+			{
+				return (h + i);
+			}
+			i++;
+		}
 	}
 	return (NULL);
 }
