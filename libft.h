@@ -6,7 +6,7 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 08:59:49 by kpoo              #+#    #+#             */
-/*   Updated: 2019/06/05 11:04:55 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/06/05 16:50:59 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strncpy(char *dst, const char *src, size_t n);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *dest, const char *src, size_t n);
-size_t				ft_strlcat(char *dest, const char *src, size_t size);
+size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 char				*ft_strchr(const char *str, int c);
 char				*ft_strrchr(const char *str, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
