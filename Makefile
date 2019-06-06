@@ -6,7 +6,7 @@
 #    By: kpoo <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 09:28:07 by kpoo              #+#    #+#              #
-#    Updated: 2019/06/05 16:31:04 by kpoo             ###   ########.fr        #
+#    Updated: 2019/06/06 16:01:05 by kpoo             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRCS = ./ft_memset.c ./ft_bzero.c ./ft_memcpy.c ./ft_memccpy.c ./ft_memmove.c\
 	   ./ft_strncpy.c ./ft_strcat.c ./ft_strncat.c ./ft_strchr.c ./ft_strrchr.c\
 	   ./ft_strstr.c ./ft_strnstr.c ./ft_strcmp.c ./ft_strncmp.c ./ft_atoi.c\
 	   ./ft_isalpha.c ./ft_isdigit.c ./ft_isalnum.c ./ft_isascii.c ./ft_isprint.c\
-	   ./ft_toupper.c ./ft_tolower.c ./ft_strlcat.c\
+	   ./ft_toupper.c ./ft_tolower.c ./ft_strlcat.c ./ft_memalloc.c\
+	   ./ft_memdel.c ./ft_strnew.c ./ft_strdel.c\
 
 OBJS = $(SRCS:.c=.o)
 
