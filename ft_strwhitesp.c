@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_strwhitesp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/10 12:12:30 by kpoo              #+#    #+#             */
-/*   Updated: 2019/06/12 10:30:19 by kpoo             ###   ########.fr       */
+/*   Created: 2019/06/12 12:48:55 by kpoo              #+#    #+#             */
+/*   Updated: 2019/06/12 12:50:48 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+int		ft_strwhitesp(char c)
 {
-	if (!s1 || !s2)
-		return (-1);
-	if (ft_strncmp(s1, s2, n) == 0)
-		return (1);
-	return (0);
+	return (c == ' ' || c == '\t' || c == '\n');
 }
