@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/18 09:24:21 by kpoo              #+#    #+#             */
-/*   Updated: 2019/06/18 11:31:05 by kpoo             ###   ########.fr       */
+/*   Created: 2019/06/18 10:54:42 by kpoo              #+#    #+#             */
+/*   Updated: 2019/06/18 10:57:21 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+size_t		ft_countwords(char const *s, char c)
 {
-	char	**str;
-	size_t	size;
 	int		i;
-	int		start;
+	size_t	size;
 
 	i = 0;
 	size = 0;
-	if (!s || !(str = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1))))
-		return (NULL);
+	while (s[i] && s[i] == c)
+		i++;
 	while (s[i])
 	{
-		if (s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
-		else
+		if (s[i])
 		{
-			start = i;
 			while (s[i] && s[i] != c)
 				i++;
-			str[size++] = ft_strsub(s, start, i - start);
+			size++;
 		}
 	}
-	str[size] = NULL;
-	return (str);
+	return (size);
 }
