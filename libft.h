@@ -6,7 +6,7 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 08:59:49 by kpoo              #+#    #+#             */
-/*   Updated: 2019/06/18 10:57:58 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/06/18 15:17:13 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct		s_list
 }					t_list;
 
 int					ft_strwhitesp(char c);
+int					ft_intlen(int n);
 size_t				ft_countwords(char const *s, char c);
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
