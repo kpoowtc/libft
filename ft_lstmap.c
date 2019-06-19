@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/29 10:36:29 by kpoo              #+#    #+#             */
-/*   Updated: 2019/06/19 16:15:51 by kpoo             ###   ########.fr       */
+/*   Created: 2019/06/19 15:41:26 by kpoo              #+#    #+#             */
+/*   Updated: 2019/06/19 18:23:06 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char	*src_copy;
-	char	*dst_copy;
-	size_t	i;
+	t_list *new;
+	t_list *iter;
 
-	if (dst == NULL && src == NULL && len)
-		return (dst);
-	i = -1;
-	src_copy = (char *)src;
-	dst_copy = (char *)dst;
-	if (src_copy < dst_copy)
-		while ((int)(--len) >= 0)
-			*(dst_copy + len) = *(src_copy + len);
-	else
-		while (++i < len)
-			*(dst_copy + i) = *(src_copy + i);
-	return (dst);
+	if (!lst && !f)
+		return (NULL);
+	if (lst == 0)
+		return (0);
+	if (!(new = (t_list*)malloc(sizeof(t_list))))
+		return (NULL);
+	iter = f(lst);
+	new = iter;
+	while (lst->next)
+	{
+		lst = lst->next;
+		iter->next = f(lst);
+		iter = iter->next;
+	}
+	return (new);
 }
