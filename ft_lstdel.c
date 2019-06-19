@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/29 12:38:01 by kpoo              #+#    #+#             */
-/*   Updated: 2019/06/19 14:12:10 by kpoo             ###   ########.fr       */
+/*   Created: 2019/06/19 14:12:44 by kpoo              #+#    #+#             */
+/*   Updated: 2019/06/19 14:31:04 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
-{
-	const unsigned char		*str1;
-	const unsigned char		*str2;
 
-	if (s1 == s2 || n == 0)
-		return (0);
-	str1 = (const unsigned char *)s1;
-	str2 = (const unsigned char *)s2;
-	while (n--)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+{
+	t_list *ptr;
+	t_list *ptrnext;
+
+	ptr = *alst;
+	while (ptr->next != NULL)
 	{
-		if (*str1 != *str2)
-			return (*str1 - *str2);
-		if (n)
-		{
-			str1++;
-			str2++;
-		}
+		ptrnext = ptr->next;
+		del(ptr->content, ptr->content_size);
+		free(ptr);
+		ptr = ptrnext;
 	}
-	return (0);
+	del(ptr->content, ptr->content_size);
+	free(ptr);
+	*alst = NULL;
 }
