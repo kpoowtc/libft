@@ -6,7 +6,7 @@
 /*   By: kpoo <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 14:18:25 by kpoo              #+#    #+#             */
-/*   Updated: 2019/06/19 18:36:13 by kpoo             ###   ########.fr       */
+/*   Updated: 2019/06/21 11:59:58 by kpoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,11 @@ char	*ft_itoa(int n)
 	if (!(str = (char *)malloc(sizeof(char) * len)))
 		return (NULL);
 	if (temp == -2147483648)
-	{
-		str = ft_strdup("-2147483648");
-		return (str);
-	}
+		return (str = ft_strdup("-2147483648"));
 	str[len] = '\0';
 	len--;
 	if (temp < 0)
-	{
 		temp = temp * -1;
-	}
 	while (temp >= 10)
 	{
 		str[len] = (temp % 10) + '0';
